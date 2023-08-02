@@ -1,0 +1,274 @@
+[gd_scene load_steps=15 format=3 uid="uid://vrnp51hchlt6"]
+
+[ext_resource type="Texture2D" uid="uid://c6akdixper77d" path="res://Assets/Images/1080x1920-white-solid-color-background.jpg" id="1_jld4t"]
+[ext_resource type="Script" path="res://Scripts/level_select.gd" id="1_lk7r3"]
+[ext_resource type="Texture2D" uid="uid://7b2uw4231fiw" path="res://Assets/BG/BG_Desk.png" id="2_m1xch"]
+[ext_resource type="Texture2D" uid="uid://prvw5uc4jm3w" path="res://Assets/Icons/tinder_icon.png" id="2_mx8p7"]
+[ext_resource type="Texture2D" uid="uid://cubnluirske65" path="res://Assets/Icons/icons8-redemarrer-90.png" id="2_xkr02"]
+[ext_resource type="Texture2D" uid="uid://bvsiuguva74a5" path="res://Assets/Icons/icons8-diamants-96.png" id="3_8bf5c"]
+[ext_resource type="Texture2D" uid="uid://bj0kuwp7hhh2e" path="res://Assets/Icons/icons8-multiplier-90.png" id="3_lv5h1"]
+[ext_resource type="Texture2D" uid="uid://bi2ne8j55lxep" path="res://Assets/Icons/icons8-etoile-90.png" id="4_ap8xo"]
+[ext_resource type="Texture2D" uid="uid://cbmaoxhe4k6ol" path="res://Assets/Icons/icons8-bulle-160.png" id="4_wcq7o"]
+[ext_resource type="Texture2D" uid="uid://cavrpeqsajoqc" path="res://Assets/Icons/icons8-aimer-96.png" id="5_jraow"]
+[ext_resource type="Texture2D" uid="uid://dmdmvalrmhqgy" path="res://Assets/Icons/icons8-eclair-96.png" id="6_hqkkq"]
+[ext_resource type="Texture2D" uid="uid://btxl5gd6yvl68" path="res://Assets/Images/Player_Portrait-modified_96x96.png" id="6_p3ja5"]
+[ext_resource type="PackedScene" uid="uid://30oiseyigc32" path="res://Scenes/card.tscn" id="7_djgdd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dm08m"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_color = Color(0.615686, 0.615686, 0.615686, 0.0666667)
+shadow_size = 6
+
+[node name="Phone" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 551.0
+offset_top = 57.0
+offset_right = 551.0
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_lk7r3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -1342.0
+offset_top = -102.0
+offset_right = 2498.0
+offset_bottom = 2058.0
+texture = ExtResource("2_m1xch")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+modulate = Color(0.929412, 0.929412, 0.929412, 1)
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 1920.0
+texture = ExtResource("1_jld4t")
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 161.0
+texture = ExtResource("1_jld4t")
+
+[node name="TopMenu" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = -8.0
+offset_top = -22.0
+offset_right = 1073.0
+offset_bottom = 170.0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopMenu"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TopMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 30
+
+[node name="TextureButton" type="TextureButton" parent="TopMenu/HBoxContainer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_mx8p7")
+stretch_mode = 5
+
+[node name="MarginContainer3" type="MarginContainer" parent="TopMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 30
+
+[node name="TextureButton" type="TextureButton" parent="TopMenu/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_8bf5c")
+stretch_mode = 5
+
+[node name="MarginContainer4" type="MarginContainer" parent="TopMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 30
+
+[node name="TextureButton" type="TextureButton" parent="TopMenu/HBoxContainer/MarginContainer4"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("4_wcq7o")
+stretch_mode = 5
+
+[node name="MarginContainer5" type="MarginContainer" parent="TopMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 30
+
+[node name="TextureButton" type="TextureButton" parent="TopMenu/HBoxContainer/MarginContainer5"]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("6_p3ja5")
+stretch_mode = 5
+
+[node name="CardContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 179.0
+offset_right = 25.0
+offset_bottom = 179.0
+scale = Vector2(0.95, 1)
+
+[node name="Card" parent="CardContainer" instance=ExtResource("7_djgdd")]
+layout_mode = 2
+
+[node name="BottomMenu" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_top = 1674.0
+offset_right = 1116.0
+offset_bottom = 1945.0
+theme_override_constants/margin_bottom = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BottomMenu"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="BottomMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Button" type="Button" parent="BottomMenu/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_dm08m")
+
+[node name="MarginContainer" type="MarginContainer" parent="BottomMenu/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="TextureButton" type="TextureButton" parent="BottomMenu/HBoxContainer/MarginContainer/MarginContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_xkr02")
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="BottomMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Button" type="Button" parent="BottomMenu/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_dm08m")
+
+[node name="MarginContainer" type="MarginContainer" parent="BottomMenu/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="TextureButton" type="TextureButton" parent="BottomMenu/HBoxContainer/MarginContainer2/MarginContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_lv5h1")
+stretch_mode = 5
+
+[node name="MarginContainer3" type="MarginContainer" parent="BottomMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Button" type="Button" parent="BottomMenu/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_dm08m")
+
+[node name="MarginContainer" type="MarginContainer" parent="BottomMenu/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="TextureButton" type="TextureButton" parent="BottomMenu/HBoxContainer/MarginContainer3/MarginContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_ap8xo")
+stretch_mode = 5
+
+[node name="MarginContainer4" type="MarginContainer" parent="BottomMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Button" type="Button" parent="BottomMenu/HBoxContainer/MarginContainer4"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_dm08m")
+
+[node name="MarginContainer" type="MarginContainer" parent="BottomMenu/HBoxContainer/MarginContainer4"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="TextureButton" type="TextureButton" parent="BottomMenu/HBoxContainer/MarginContainer4/MarginContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_jraow")
+stretch_mode = 5
+
+[node name="MarginContainer5" type="MarginContainer" parent="BottomMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Button" type="Button" parent="BottomMenu/HBoxContainer/MarginContainer5"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_dm08m")
+
+[node name="MarginContainer" type="MarginContainer" parent="BottomMenu/HBoxContainer/MarginContainer5"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="TextureButton" type="TextureButton" parent="BottomMenu/HBoxContainer/MarginContainer5/MarginContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_hqkkq")
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
